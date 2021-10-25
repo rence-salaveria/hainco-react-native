@@ -17,7 +17,7 @@ export const Styles = StyleSheet.create({
             default: {
                 backgroundColor:'#f5f5dc',
                 width: '100%',
-                height: '150%'
+                height: '122%'
             }
         })
     },
@@ -38,16 +38,23 @@ export const Styles = StyleSheet.create({
         color: '#8B4411'
     },
     subtitle: {
-        fontFamily: 'KleeOneSemiBold',
+        fontFamily: 'KleeOne',
         fontWeight: '500',
-        fontSize: 15,
+        fontSize: 18,
         marginBottom: 50
     },
     buttonText: {
-        fontFamily: 'KleeOneSemiBold'
+        fontFamily: 'Karla',
+        color: '#fff'
     },
     buttonStyle: {
-        borderRadius: 5
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 7,
+        elevation: 3,
+        backgroundColor: '#CC9767',
     }
 });
 

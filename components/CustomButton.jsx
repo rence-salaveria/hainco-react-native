@@ -1,14 +1,16 @@
 import React from 'react';
-import { Pressable, Text } from "react-native";
-import { Styles } from "./Styles";
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Styles, Layout } from './Styles'
 
-function CustomButton(props) {
-    const { buttonText, pressAction } = props
+export default function CustomButton(props) {
+    const { onPress, title = 'Save' } = props;
     return (
-        <Pressable style={[Styles.buttonStyle, Styles.buttonText]} onPress={pressAction}>
-            <Text>{buttonText}</Text>
-        </Pressable>
-    )
+        <TouchableOpacity
+            style={Styles.buttonStyle}
+            onPress={onPress}
+            activeOpacity={0.2}
+        >
+            <Text style={Styles.buttonText}>{title}</Text>
+        </TouchableOpacity>
+    );
 }
-
-export default CustomButton;
