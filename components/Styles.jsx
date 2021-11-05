@@ -2,7 +2,6 @@ import {StatusBar, StyleSheet, Platform} from "react-native";
 
 export const Styles = StyleSheet.create({
     container: {
-        marginTop: StatusBar.current,
         ...Platform.select({
             ios: {
                 backgroundColor: '#f5f5dc',
@@ -17,19 +16,16 @@ export const Styles = StyleSheet.create({
             default: {
                 backgroundColor:'#f5f5dc',
                 width: '100%',
-                height: '122%'
+                height: '125%'
             }
         })
-    },
-    getStartedButton: {
-        backgroundColor: '#F0EFEB'
     },
     logo: {
         width: 200,
         height: 200,
         resizeMode: 'stretch',
         margin: 50,
-        marginTop: 140,
+        marginTop: 100,
         marginBottom: 15
     },
     title: {
@@ -55,6 +51,10 @@ export const Styles = StyleSheet.create({
         borderRadius: 7,
         elevation: 3,
         backgroundColor: '#CC9767',
+    },
+    textInput: {
+        borderWidth: 1,
+        width: '50%'
     }
 });
 

@@ -1,8 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import WelcomeScreen from "./components/WelcomeScreen";
+
+/* Screens */
+import WelcomeScreen from './routes/WelcomeScreen';
+import LoginScreen from './routes/LoginScreen';
+
+/* Plugins */
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Font from 'expo-font';
-import {Styles} from "./components/Styles";
 
 export default function App() {
     const [loaded] = Font.useFonts({
@@ -15,9 +20,41 @@ export default function App() {
         return null;
     }
 
+    const Stack = createNativeStackNavigator()
+
     return (
-        <View>
-            <WelcomeScreen/>
-        </View>
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="WelcomeScreen">
+                <Stack.Screen
+                    name="WelcomeScreen"
+                    component={WelcomeScreen}
+                    options={{
+                        title: 'Welcome to Hain.co',
+                        headerStyle: {
+                            backgroundColor: '#CC9767',
+                        },
+                        headerTintColor: '#fff',
+                        headerTitleStyle: {
+                            fontWeight: 'light',
+                        },
+                    }}
+                />
+
+                <Stack.Screen
+                    name="LoginScreen"
+                    component={LoginScreen}
+                    options={{
+                        title: 'Login to Hain.co',
+                        headerStyle: {
+                            backgroundColor: '#CC9767',
+                        },
+                        headerTintColor: '#fff',
+                        headerTitleStyle: {
+                            fontWeight: 'light',
+                        }
+                    }}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
     );
 }

@@ -5,7 +5,11 @@ class PressActions {
 
     static clickMe() {
         // windows only / browsers
-        alert('D kopo alam yan! Nagulat nlang ako kanina my ganyan, mamamatay man ako !!!Hindi po ako ang naglagay nyan!!! Wag nyo po akong husga');
+        alert('Clicked button!');
+    }
+
+    static register() {
+        alert('Register Screen');
     }
 }
 
